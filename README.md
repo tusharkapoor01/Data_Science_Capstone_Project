@@ -1,10 +1,10 @@
 # wordprediction package for R
-Michael David Gill  
-April 17, 2016  
+Tushar Kapoor  
+June 17, 2017  
 
 ### Summary
 
-This package, submitted in partial fulfillment of the requirements of the Coursera course, "Data Science Capstone", contains functions for an auto-completion model that predicts the next word to be typed based on a word or phrase previously typed.  The presentation can be found at [http://rpubs.com/michaelgill1969/wordprediction](http://rpubs.com/michaelgill1969/wordprediction) and a demonstration at [https://michaelgill1969.shinyapps.io/word-prediction/](https://michaelgill1969.shinyapps.io/word-prediction/).
+This package, submitted in partial fulfillment of the requirements of the Coursera course, "Data Science Capstone", contains functions for an auto-completion model that predicts the next word to be typed based on a word or phrase previously typed.  The presentation can be found at [http://rpubs.com/tkapoor/Capstone_Presentation]http://rpubs.com/tkapoor/Capstone_Presentation) and a demonstration at [https://tkapoor.shinyapps.io/shiny//](https://tkapoor.shinyapps.io/shiny/).
 
 Auto-completion is a common function on mobile devices. As a user types, an auto-completion function presents that user with possible completions to the current word being typed or probable words that could follow the current word or phrase after it is typed. The package "wordprediction" provides the latter function.
 
@@ -26,7 +26,7 @@ Data cleaning involves transforming the raw text in the corpus into a format mor
 
 According to Wikipedia (N-gram, n.d.), "an *n*-gram is a contiguous sequence of n items from a given sequence of text or speech."  This package takes a key word or phrase, matches that key to the most frequent *n*-1 term found in a TDM of *n*-word terms, and returns the *n*th word of that item.
 
-Of course, not all possible words or phrases exist in the corpus from which the TDM was derived.  For this reason, a simplified Katz's back-off model is used, which backs off to smaller *n*-grams when a key is not found in the larger *n*-gram.  The maximum *n*-gram handled is a trigram.  The word returned is the match found in the largest *n*-gram where the key is found.  When the key is not found in the unigram, the most common word in the corpus "will" is returned.  This function is demonstrated using a Shiny app hosted on shinyapps.io at [https://michaelgill1969.shinyapps.io/word-prediction/](https://michaelgill1969.shinyapps.io/word-prediction/).
+Of course, not all possible words or phrases exist in the corpus from which the TDM was derived.  For this reason, a simplified Katz's back-off model is used, which backs off to smaller *n*-grams when a key is not found in the larger *n*-gram.  The maximum *n*-gram handled is a trigram.  The word returned is the match found in the largest *n*-gram where the key is found.  When the key is not found in the unigram, the most common word in the corpus "will" is returned.  This function is demonstrated using a Shiny app hosted on shinyapps.io at [https://tkapoor.shinyapps.io/shiny/](https://tkapoor.shinyapps.io/shiny/).
 
 ### Conclusion
 
